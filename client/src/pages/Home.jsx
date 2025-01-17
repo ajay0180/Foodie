@@ -53,17 +53,17 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
 
-  const getProducts = async () => {
-    setLoading(true);
-    await getAllProducts().then((res) => {
-      setProducts(res.data);
-      setLoading(false);
-    });
-  };
+  // const getProducts = async () => {
+  //   setLoading(true);
+  //   await getAllProducts().then((res) => {
+  //     setProducts(res.data);
+  //     setLoading(false);
+  //   });
+  // };
 
-  useEffect(() => {
-    getProducts();
-  }, []);
+  // useEffect(() => {
+  //   getProducts();
+  // }, []);
 
   return (
     <Container>
