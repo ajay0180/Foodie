@@ -7,13 +7,22 @@ import FoodRoutes from "./routes/Food.js";
 dotenv.config();
 
 const app = express();
-app.use(
+app.options(
+  "*",
   cors({
-    origin: ["*", "https://foodie-client-bice.vercel.app/"],
+    origin: ["https://foodie-client-bice.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+app.use(
+  cors({
+    origin: ["https://foodie-client-bice.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
 
