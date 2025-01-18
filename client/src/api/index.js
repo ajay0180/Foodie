@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://foodie-api-tau.vercel.app/",
+  baseURL: "https://foodie-api-tau.vercel.app/api/",
 });
 
 //auth
